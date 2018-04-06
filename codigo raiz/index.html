@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GESTIÓN HUMANA</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+
+  </head>
+  <body>
+
+ <div id="wrapper" >
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">BRIGADISTAS</a>
+                </li>
+                <li>
+                    <a href="#" id="sites">PUNTOS ESTRATEGICOS</a>
+                </li>
+                <li>
+                    <a href="#">---</a>
+                </li>
+                <li>
+                    <a href="#">-----</a>
+                </li>
+                <li>
+                    <a href="#">--</a>
+                </li>
+                <li>
+                    <a href="#">----</a>
+                </li>
+                <li>
+                    <a href="#">-</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+             
+              <div class="box">
+                <div class="row">
+                  <div class="col-lg-12 ">
+                    <hr>
+                    <h2 class="intro-text text-center"><strong>Monitoreo Gestion humana</strong></h2>
+                    <hr>
+                    <div class="container" style="width: 100%; height: 450px">
+                      <div id="map"></div>
+                      <script>
+      var map;
+      var myLatLng = {lat: 11.019192, lng: -74.850265};
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 11.019192, lng: -74.850265},
+          zoom: 17
+        });
+        document.getElementById("sites").addEventListener("click", myFunction);
+function myFunction() {
+          document.getElementById("sites").innerHTML = "YOU CLICKED ME!";  
+           var marker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map,
+                      title: 'Hello World!'
+                    });
+           }
+
+
+      }
+    </script>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div> 
+              <br>
+            <div class="container-fluid">
+             <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <br>
+    <script>
+      document.getElementById("sites").onclick = function() {myFunction()};
+
+      function myFunction() {
+          document.getElementById("sites").innerHTML = "YOU CLICKED ME!";  
+           }
+    </script>
+    
+    
+    
+    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqe74_T9qsTEMOe42rYY6eZ-J0iU40rI&callback=initMap"
+    async defer></script>
+    
+    <script src="app.js" charset="utf-8"></script>
+
+  </body>
+    
+</html>
